@@ -26,3 +26,12 @@ No claim of LeWM training improvement is made until the isolated test and a cont
 - **A/B scaffold:** `scripts/run_ab_protocol.py` records vanilla MSE, P_sig, H1 count, drift and cohesion metrics on synthetic host-side predictions.
 - **LeWM training:** not run yet; it requires the target environment and dataset dependencies.
 - **Upstream changes:** none.
+
+## 2026-09-07 — Cycle 3: calibration de sensibilité P_sig
+
+- **Action:** niveaux d'interpolation 0,00 / 0,25 / 0,50 / 0,75 / 1,00 entre une boucle périodique et un nuage gaussien, graine 42.
+- **Résultat:** P_sig max lifetime = 2,3569 / 0,8228 / 0,3859 / 0,3188 / 0,2972.
+- **Mesure robuste:** le comptage H1 brut est conservé pour diagnostic ; la décision privilégie la durée de vie maximale et les barres dépassant 15 % du maximum.
+- **Candidat d'inflexion:** environ 0,12 par plus forte baisse discrète ; ce candidat doit être validé sur des embeddings LeWM réels avant de devenir un seuil permanent.
+- **Décision:** ne pas lancer l'A/B LeWM avant validation du seuil sur données latentes réelles.
+- **Upstream changes:** none.
