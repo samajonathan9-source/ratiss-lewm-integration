@@ -1,0 +1,18 @@
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratiss-lewm-integration"
+version = "0.1.0"
+description = "External RATISS plugins for LeWM experiments"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23"]
+
+[project.optional-dependencies]
+topology = ["ripser>=0.6"]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["ratiss_lewm*"]

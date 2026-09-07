@@ -1,0 +1,38 @@
+{
+  "protocol": "synthetic host-side A/B scaffold",
+  "rows": [
+    {
+      "seed": 0,
+      "vanilla_mse": 0.007289927712710181,
+      "plugin_psig": 1.1151166260242462,
+      "betti_h1": 2,
+      "prediction_drift": 0.007289927712710181,
+      "cohesion_entropy": 4.794741829015934
+    },
+    {
+      "seed": 1,
+      "vanilla_mse": 0.005431967204195744,
+      "plugin_psig": 1.1427143216133118,
+      "betti_h1": 5,
+      "prediction_drift": 0.005431967204195744,
+      "cohesion_entropy": 5.658596909897197
+    },
+    {
+      "seed": 2,
+      "vanilla_mse": 0.0068381649989386825,
+      "plugin_psig": 1.1679841578006744,
+      "betti_h1": 2,
+      "prediction_drift": 0.0068381649989386825,
+      "cohesion_entropy": 4.062167960329153
+    },
+    {
+      "seed": 3,
+      "vanilla_mse": 0.00578418259893006,
+      "plugin_psig": 1.255645751953125,
+      "betti_h1": 1,
+      "prediction_drift": 0.00578418259893006,
+      "cohesion_entropy": 5.103001117782229
+    }
+  ],
+  "warning": "not a LeWM training result"
+}
