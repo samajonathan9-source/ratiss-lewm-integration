@@ -35,3 +35,11 @@ No claim of LeWM training improvement is made until the isolated test and a cont
 - **Candidat d'inflexion:** environ 0,12 par plus forte baisse discrète ; ce candidat doit être validé sur des embeddings LeWM réels avant de devenir un seuil permanent.
 - **Décision:** ne pas lancer l'A/B LeWM avant validation du seuil sur données latentes réelles.
 - **Upstream changes:** none.
+
+## 2026-09-09 — Cycle 4: A/B checkpoint-level LeWM
+
+- **Checkpoint:** `quentinll/lewm-pusht`, `weights.pt` (72,290,721 bytes).
+- **Chargement:** réussi après adaptation externe des noms internes Transformers et désactivation du pooler absent du checkpoint ; aucun upstream modifié.
+- **Entrées:** batch déterministe synthétique `(B=2,T=4,C=3,H=224,W=224)` avec graine 123 ; l'archive PushT publique fait environ 13,1 Go et n'a pas été téléchargée.
+- **Résultat:** embeddings `(2,4,192)`, prédictions `(2,3,192)`, vanilla next-embedding MSE `0.0286590`, P_sig `0.0`, Betti H1 `[0,0]`, dérive thermodynamique `0.0286590`, cohésion moyenne `0.35119`, frustration `0.50044`, rupture de régime `false`.
+- **Interprétation:** le chemin d'observation RATISS fonctionne sur le vrai checkpoint ; ce résultat ne constitue pas une validation PushT complète ni une preuve de gain d'entraînement.

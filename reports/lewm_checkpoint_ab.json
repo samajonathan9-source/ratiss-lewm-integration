@@ -1,0 +1,39 @@
+{
+  "checkpoint": "quentinll/lewm-pusht",
+  "checkpoint_file_bytes": 72290721,
+  "input_shape": [
+    2,
+    4,
+    3,
+    224,
+    224
+  ],
+  "embedding_shape": [
+    2,
+    4,
+    192
+  ],
+  "prediction_shape": [
+    2,
+    3,
+    192
+  ],
+  "vanilla_next_embedding_mse": 0.02865900658071041,
+  "ratiss_p_sig": 0.0,
+  "ratiss_betti_h1": [
+    0,
+    0
+  ],
+  "ratiss_thermo": {
+    "energy": 0.7744485307704028,
+    "entropy_proxy": 1.2906932842806433,
+    "prediction_drift": 0.02865900907766415
+  },
+  "ratiss_cohesion": {
+    "mean_abs_correlation": 0.3511900977654406,
+    "entropy": 1.3911400127805034,
+    "frustration": 0.5004363001745201,
+    "regime_break": false
+  },
+  "note": "real LeWM checkpoint; deterministic synthetic pixels/actions; not full PushT dataset training"
+}
